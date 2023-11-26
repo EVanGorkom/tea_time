@@ -12,8 +12,13 @@ RSpec.describe Subscription do
       "customer_id": customer1.id
     } 
 
-    post "/subscriptions", params: subscription_data, as: :json
+    post "/api/v1/subscriptions", params: subscription_data, as: :json
 
     expect(response).to have_http_status(201)
+
+    json_response = JSON.parse(response.body)
+
+    expect(json_response).to be_a Hash
+    expect(json_response['success']).to eq("Subcription added successfully")
   end
 end
