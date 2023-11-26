@@ -21,4 +21,9 @@ RSpec.describe Subscription do
     expect(json_response).to be_a Hash
     expect(json_response['success']).to eq("Subcription added successfully")
   end
+
+  it "Can delete an existing subscription" do
+    customer1 = Customer.create(first_name: "Jill", last_name: "Warrick", email: "diamond_dust@gmail.com", address: "Castle Rosfield")
+    subscription1 = Subscription.create
+  end
 end
