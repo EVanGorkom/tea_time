@@ -15,6 +15,17 @@ class Api::V1::SubscriptionsController < ApplicationController
     render json: { success: "Subscription cancelled successfully" }, status: 204
   end
 
+  def index
+    customer = Customer.find_by(id: params[:id])
+    
+    if customer
+      subscriptions = customer.subscriptions
+      render json: subscriptions, status: 200
+    else
+      render json: { error: "A problem occured, please try again" }, status: 401
+    end
+  end
+
   private
 
   def sub_params
