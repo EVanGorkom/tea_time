@@ -10,6 +10,11 @@ class Api::V1::SubscriptionsController < ApplicationController
     end
   end
 
+  def destroy
+    subscription = Subscription.find(params[:id])
+    render json: { success: "Subscription cancelled successfully" }, status: 204
+  end
+
   private
 
   def sub_params
