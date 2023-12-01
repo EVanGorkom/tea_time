@@ -45,6 +45,7 @@ Accept: application/json
 
 ```
 
+
 - **GET /api/v1/subscriptions**: Retrieve a list of subscriptions.
 - Example Request Call:
 ```
@@ -58,6 +59,7 @@ Accept: application/json
 
 ```
 
+
 - **DELETE /api/v1/subscriptions/:id**: Deletes a subscription.
 - Example Request Call:
 ```
@@ -70,6 +72,7 @@ Accept: application/json
 ```
 
 ```
+
 
 ## Contributors 
 - Ethan Van Gorkom | [GitHub](https://github.com/EVanGorkom) | [LinkedIn](https://www.linkedin.com/in/evangorkom/)

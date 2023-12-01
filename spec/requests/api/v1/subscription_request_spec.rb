@@ -51,7 +51,7 @@ RSpec.describe Subscription do
       customer1 = Customer.create(first_name: "Jill", last_name: "Warrick", email: "diamond_dust@gmail.com", address: "Castle Rosfield")
       subscription1 = Subscription.create(title: "Pheonix Pinion", price: 99, frequency: 12, status: "active", customer_id: customer1.id)
 
-      delete "/api/v1/subscriptions/#{subscription1.id}", params: { id: subscription1.id }
+      delete "/api/v1/subscriptions/#{subscription1.id}"
 
       expect(response).to have_http_status(204)
     end
